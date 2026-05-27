@@ -1,0 +1,57 @@
+name: Send Vanilla Newsletter
+
+on:
+  push:
+    branches: [main]
+    paths: ['newsletter.html']
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Send via Resend API
+        run: |
+          python3 << 'EOF'
+          import urllib.request, json, subprocess, sys
+
+          api_key = "${{ secrets.RESEND_API_KEY }}"
+
+          with open('newsletter.html', 'r') as f:
+              html = f.read()
+          print(f"HTML size: {len(html)} chars")
+
+          today = subprocess.run(
+              ['date', '+%A, %B %d, %Y'],
+              capture_output=True, text=True
+          ).stdout.strip()
+
+          payload = json.dumps({
+              "from": "Vanilla Daily Digest <onboarding@resend.dev>",
+              "to": ["kanta.myk@gmail.com"],
+              "subject": f"Vanilla Daily Digest — {today}",
+              "html": html
+          }).encode('utf-8')
+
+          req = urllib.request.Request(
+              'https://api.resend.com/emails',
+              data=payload,
+              headers={
+                  'Authorization': f'Bearer {api_key}',
+                  'Content-Type': 'application/json'
+              },
+              method='POST'
+          )
+
+          try:
+              with urllib.request.urlopen(req) as r:
+                  result = json.loads(r.read())
+                  print(f"SUCCESS: Sent! Resend ID: {result.get('id')}")
+          except urllib.error.HTTPError as e:
+              print(f"HTTP ERROR {e.code}: {e.read().decode()}")
+              sys.exit(1)
+          except Exception as e:
+              print(f"ERROR: {e}")
+              sys.exit(1)
+          EOF
