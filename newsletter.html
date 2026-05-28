@@ -2,109 +2,39 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vanilla Daily Digest</title>
+<title>Vanilla Daily Digest — Test</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@300;400;500;600;700&display=swap');
-*{margin:0;padding:0;box-sizing:border-box;}
-body{background:#F7F5F0;font-family:'Raleway',sans-serif;color:#2D3A25;-webkit-font-smoothing:antialiased;}
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,400&family=Raleway:wght@400;600&display=swap');
+body{background:#F7F5F0;font-family:'Raleway',sans-serif;color:#2D3A25;margin:0;padding:0;}
 .wrapper{max-width:620px;margin:0 auto;padding:0 0 40px;}
 .top-bar{height:5px;background:#6B7F54;}
-.masthead{padding:32px 32px 24px;text-align:center;}
+.masthead{padding:32px;text-align:center;}
 .masthead-eyebrow{font-size:9px;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#8A9B7A;margin-bottom:14px;}
-.masthead-title{font-family:'Lora',Georgia,serif;font-size:40px;font-weight:700;color:#2D3A25;line-height:1;margin-bottom:14px;}
-.masthead-divider{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px;}
-.masthead-line{width:60px;height:1px;background:#6B7F54;}
-.masthead-leaf{width:8px;height:8px;background:#6B7F54;transform:rotate(45deg);}
+.masthead-title{font-family:'Lora',serif;font-size:40px;font-weight:700;color:#2D3A25;line-height:1;margin-bottom:14px;}
 .masthead-date{font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#8A9B7A;}
-.rule-dark{border:none;border-top:1.5px solid #2D3A25;margin:0;}
-.rule-sage{border:none;border-top:1px solid #C8D4B8;margin:24px 32px;}
-.contents{background:#EDF1E7;padding:20px 32px;}
-.contents-label{font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:#6B7F54;margin-bottom:12px;}
-.contents-list{list-style:none;}
-.contents-item{display:flex;align-items:baseline;gap:12px;padding:5px 0;border-bottom:1px solid #D4DEC8;}
-.contents-item:last-child{border-bottom:none;}
-.contents-num{font-family:'Lora',serif;font-size:11px;font-weight:600;color:#6B7F54;min-width:20px;font-style:italic;}
-.contents-title{font-size:12px;font-weight:500;color:#2D3A25;line-height:1.4;}
 .body-pad{padding:0 32px;}
-.section-label{font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:#6B7F54;margin:28px 0 16px;}
-.story-number-xl{font-family:'Lora',serif;font-size:56px;font-weight:700;color:#C8D4B8;line-height:1;margin-bottom:-8px;font-style:italic;}
-.story-headline-xl{font-family:'Lora',Georgia,serif;font-size:26px;font-weight:700;line-height:1.25;color:#2D3A25;margin-bottom:12px;}
-.story-headline-md{font-family:'Lora',Georgia,serif;font-size:18px;font-weight:600;line-height:1.35;color:#2D3A25;margin-bottom:8px;}
-.story-category{font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#8A9B7A;margin-bottom:8px;}
-.story-body{font-size:14px;line-height:1.75;color:#4A5C3C;margin-bottom:10px;}
-.story-meta{font-size:11px;color:#8A9B7A;margin-bottom:10px;font-weight:500;}
-.story-meta strong{color:#6B7F54;}
-.story-link{font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#6B7F54;text-decoration:none;border-bottom:1.5px solid #6B7F54;padding-bottom:1px;}
-.story-secondary{display:flex;gap:16px;margin-bottom:20px;}
-.story-num-sm{font-family:'Lora',serif;font-size:28px;font-weight:700;color:#C8D4B8;line-height:1;font-style:italic;min-width:36px;}
-.story-content{flex:1;}
-.market-block{background:#2D3A25;padding:24px 28px;margin:28px 0;}
-.market-label{font-size:9px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:#8A9B7A;margin-bottom:16px;}
-.market-stats{display:table;width:100%;}
-.stat-cell{display:table-cell;vertical-align:top;}
-.stat-cell:nth-child(2){text-align:center;}
-.stat-cell:nth-child(3){text-align:right;}
-.stat-num{font-family:'Lora',serif;font-size:26px;font-weight:700;color:#F7F5F0;line-height:1;margin-bottom:4px;}
-.stat-lbl{font-size:9px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#8A9B7A;}
-.footer{padding:20px 0 0;text-align:center;border-top:1.5px solid #2D3A25;}
-.footer-name{font-family:'Lora',serif;font-size:15px;font-weight:600;color:#2D3A25;margin-bottom:6px;font-style:italic;}
-.footer-text{font-size:10px;color:#8A9B7A;letter-spacing:0.06em;line-height:1.8;}
-.footer-text a{color:#6B7F54;text-decoration:none;}
+.test-notice{background:#EDF1E7;border-left:4px solid #6B7F54;padding:20px 24px;margin:24px 0;font-size:14px;line-height:1.75;color:#4A5C3C;}
+.footer{padding:20px 0 0;text-align:center;border-top:1.5px solid #2D3A25;margin-top:32px;}
+.footer-text{font-size:10px;color:#8A9B7A;line-height:1.8;}
 </style>
 </head>
 <body>
 <div class="wrapper">
   <div class="top-bar"></div>
   <div class="masthead">
-    <div class="masthead-eyebrow">M Recycle Group &nbsp;&middot;&nbsp; Industry Intelligence</div>
+    <div class="masthead-eyebrow">M Recycle Group &middot; Industry Intelligence</div>
     <div class="masthead-title">Vanilla Daily Digest</div>
-    <div class="masthead-divider"><div class="masthead-line"></div><div class="masthead-leaf"></div><div class="masthead-line"></div></div>
-    <div class="masthead-date">Thursday, May 28, 2026</div>
-  </div>
-  <hr class="rule-dark">
-  <div class="contents">
-    <div class="contents-label">This Issue</div>
-    <ul class="contents-list">
-      <li class="contents-item"><span class="contents-num">01</span><span class="contents-title">IFF Opens Vanilla Innovation Centre in Madagascar to Drive Origin-Based R&amp;D</span></li>
-      <li class="contents-item"><span class="contents-num">02</span><span class="contents-title">Madagascar Cyclones Trigger Export Delays and Supermarket Shortages</span></li>
-      <li class="contents-item"><span class="contents-num">03</span><span class="contents-title">Vanilla Extract Market Valued at $5.89B in 2026, Eyes $9.27B by 2033</span></li>
-      <li class="contents-item"><span class="contents-num">04</span><span class="contents-title">North America Claims 37.8% of Global Vanilla Bean Market Share</span></li>
-      <li class="contents-item"><span class="contents-num">05</span><span class="contents-title">Blockchain and Precision Sensors Transform Vanilla Supply Chain Transparency</span></li>
-      <li class="contents-item"><span class="contents-num">06</span><span class="contents-title">Clean-Label Push Cements Vanilla Extract&rsquo;s Dominance in Food Flavouring</span></li>
-    </ul>
+    <div class="masthead-date">Wednesday, May 27, 2026 &mdash; SMTP Test</div>
   </div>
   <div class="body-pad">
-    <div class="market-block">
-      <div class="market-label">Market Snapshot &mdash; 2026</div>
-      <div class="market-stats">
-        <div class="stat-cell"><div class="stat-num">$5.89B</div><div class="stat-lbl">Extract Market</div></div>
-        <div class="stat-cell"><div class="stat-num">$63,618</div><div class="stat-lbl">Avg. Export / Ton</div></div>
-        <div class="stat-cell"><div class="stat-num">~80%</div><div class="stat-lbl">Madagascar Share</div></div>
-      </div>
+    <div class="test-notice">
+      <strong style="color:#2D3A25;">Pipeline Test Email</strong><br><br>
+      This email confirms that the delivery pipeline is working correctly via SMTP (smtp.resend.com:465). 
+      Starting tomorrow at 8:01 AM Bangkok time, you will receive the full Vanilla Daily Digest with real news, 
+      market data, and analysis — beautifully formatted in the botanical sage green style you selected.
     </div>
-    <div class="section-label">Top Story</div>
-    <div class="story-number-xl">01</div>
-    <div class="story-category">Industry &amp; Innovation</div>
-    <div class="story-headline-xl">IFF Opens Vanilla Innovation Centre in Madagascar to Drive Origin-Based R&amp;D</div>
-    <div class="story-body">International Flavors &amp; Fragrances has inaugurated a 650-square-metre Vanilla Innovation Centre in Toamasina, Madagascar, consolidating lab analysis, extraction science, scent creation, and farmer collaboration under a single roof. The facility's proximity to vanilla-growing regions enables IFF to respond more rapidly to climate-related disruptions in the supply chain while deepening traceability programs with smallholder farming networks. The opening signals a broader industry shift toward investing in origin-based research rather than processing exclusively in consuming markets.</div>
-    <div class="story-meta"><strong>Food Ingredients First</strong> &nbsp;&middot;&nbsp; May 2026</div>
-    <a href="https://www.foodingredientsfirst.com/news/iff-vanilla-innovation-center-madagascar-sustainability.html" class="story-link" target="_blank" rel="noopener">Read Full Story</a>
-    <hr class="rule-sage">
-    <div class="section-label">More Stories</div>
-    <div class="story-secondary"><div class="story-num-sm">02</div><div class="story-content"><div class="story-category">Supply Chain</div><div class="story-headline-md">Madagascar Cyclones Trigger Export Delays and Supermarket Shortages</div><div class="story-body">Severe cyclones battered Madagascar's eastern coast in early 2026, devastating vanilla orchid crops and halting curing and export operations across the island. Retailers across the United States began reporting shortages of pure vanilla extract as shipments stalled at origin, with prices at the shelf climbing sharply in response. Agricultural analysts warn the market could feel supply constraints for 18 to 24 months, as replanted vines require up to three years to bear harvestable fruit.</div><div class="story-meta"><strong>Glendale Diner</strong> &nbsp;&middot;&nbsp; March 26, 2026</div><a href="https://glendale-diner.shop/news/323/2026-03-26-madagascar-vanilla-bean-exports-face-massive-delays-pushing-extract-prices-to-highs/" class="story-link" target="_blank" rel="noopener">Read Full Story</a></div></div>
-    <hr class="rule-sage">
-    <div class="story-secondary"><div class="story-num-sm">03</div><div class="story-content"><div class="story-category">Market Outlook</div><div class="story-headline-md">Vanilla Extract Market Valued at $5.89B in 2026, Eyes $9.27B by 2033</div><div class="story-body">The global vanilla extract market is estimated at USD 5.89 billion in 2026, driven by clean-label reformulation trends and strong consumer preference for natural flavouring over synthetic vanillin alternatives. North America holds the leading regional share at 39.2%, while Asia Pacific is emerging as the fastest-growing market as disposable incomes rise across China, India, and Southeast Asia. A projected CAGR of 6.7% through 2033 reflects sustained premiumisation across bakery, beverage, and wellness categories.</div><div class="story-meta"><strong>Coherent Market Insights</strong> &nbsp;&middot;&nbsp; 2026</div><a href="https://www.coherentmarketinsights.com/industry-reports/vanilla-extract-market" class="story-link" target="_blank" rel="noopener">Read Full Story</a></div></div>
-    <hr class="rule-sage">
-    <div class="story-secondary"><div class="story-num-sm">04</div><div class="story-content"><div class="story-category">Regional Markets</div><div class="story-headline-md">North America Claims 37.8% of Global Vanilla Bean Market Share</div><div class="story-body">A new Mordor Intelligence report finds North America leading the global vanilla bean market with a 37.8% share, underpinned by high consumer awareness of natural flavours and strict regulations favouring pure and organic products. The global vanilla bean sector is forecast to grow from USD 1.7 billion in 2026 to USD 2.3 billion by 2031, as food manufacturers tighten sourcing requirements in response to evolving sustainability standards. Competitive pressure is intensifying among suppliers offering verified, blockchain-backed traceability credentials.</div><div class="story-meta"><strong>PR Newswire / Mordor Intelligence</strong> &nbsp;&middot;&nbsp; 2026</div><a href="https://www.prnewswire.com/news-releases/north-america-leads-vanilla-bean-market-with-37-8-share-as-global-industry-set-to-reach-usd-2-3-billion-by-2031--says-mordor-intelligence-302739093.html" class="story-link" target="_blank" rel="noopener">Read Full Story</a></div></div>
-    <hr class="rule-sage">
-    <div class="story-secondary"><div class="story-num-sm">05</div><div class="story-content"><div class="story-category">Agritech &amp; Sustainability</div><div class="story-headline-md">Blockchain and Precision Sensors Transform Vanilla Supply Chain Transparency</div><div class="story-body">Vanilla producers are increasingly deploying blockchain verification and DNA-based tracking systems to meet rising buyer demand for supply chain transparency and ethical sourcing credentials. Solar-powered environmental sensors are being rolled out across smallholder farms in Madagascar and Indonesia, giving growers real-time data to optimise cultivation conditions and reduce crop loss from climate variability. Analysts note that suppliers with robust traceability infrastructure are securing measurable competitive advantages as major food manufacturers tighten origin requirements.</div><div class="story-meta"><strong>Farmonaut</strong> &nbsp;&middot;&nbsp; 2026</div><a href="https://farmonaut.com/blogs/vanilla-tree-7-sustainable-cultivation-ways-2026" class="story-link" target="_blank" rel="noopener">Read Full Story</a></div></div>
-    <hr class="rule-sage">
-    <div class="story-secondary"><div class="story-num-sm">06</div><div class="story-content"><div class="story-category">Consumer Trends</div><div class="story-headline-md">Clean-Label Push Cements Vanilla Extract&rsquo;s Dominance in Food Flavouring</div><div class="story-body">Industry analysts highlight vanilla extract's expanding foothold in food and beverage formulation, with the segment forecast to account for 43.7% of total vanilla extract market share in 2026. The shift away from artificial vanillin, accelerated by clean-label mandates from major retailers, is pushing procurement teams to source authentic extract despite elevated price points tied to Madagascar's supply disruptions. Premium single-origin and certified organic variants are emerging as the fastest-growing sub-segment, particularly in artisan bakery and premium ready-to-drink beverage categories.</div><div class="story-meta"><strong>Osage Food</strong> &nbsp;&middot;&nbsp; 2026</div><a href="https://osagefood.com/why-vanilla-extract-is-poised-to-dominate-2026/" class="story-link" target="_blank" rel="noopener">Read Full Story</a></div></div>
-    <hr class="rule-sage">
     <div class="footer">
-      <div class="footer-name">Vanilla Daily Digest</div>
-      <div class="footer-text">Curated daily for M Recycle Group &nbsp;&middot;&nbsp; Thursday, May 28, 2026<br><a href="#">Unsubscribe</a></div>
+      <div class="footer-text">Vanilla Daily Digest &mdash; M Recycle Group<br>Daily at 8:01 AM Bangkok Time</div>
     </div>
   </div>
 </div>
