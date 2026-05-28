@@ -40,15 +40,15 @@ jobs:
           msg = MIMEMultipart('alternative')
           msg['Subject'] = f"Vanilla Daily Digest — {today}"
           msg['From'] = "Vanilla Daily Digest <onboarding@resend.dev>"
-          msg['To'] = "kanta.myk@gmail.com"
+          msg['To'] = "mykanta01@gmail.com"
           msg.attach(MIMEText(html, 'html'))
 
           try:
               context = ssl.create_default_context()
               with smtplib.SMTP_SSL('smtp.resend.com', 465, context=context) as server:
                   server.login('resend', api_key)
-                  server.sendmail("onboarding@resend.dev", ["kanta.myk@gmail.com"], msg.as_string())
-                  print(f"SUCCESS: Email sent to kanta.myk@gmail.com — {today}")
+                  server.sendmail("onboarding@resend.dev", ["mykanta01@gmail.com"], msg.as_string())
+                  print(f"SUCCESS: Email sent to mykanta01@gmail.com — {today}")
           except Exception as e:
               print(f"ERROR: {e}")
               sys.exit(1)
